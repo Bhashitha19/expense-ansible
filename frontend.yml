@@ -4,13 +4,13 @@
   tasks:
     - name: Installing Nginx
       ansible.builtin.dnf:
-        name: nginx
+        name: Nginx
         state: present
     - name: Copy Expense Config file
       ansible.builtin.copy:
         src: expense.conf
         dest: /etc/nginx/default.d/expense.conf
-    - name: Clean old Nginx Dir
+    - name: Clean Old Nginx Dir
       ansible.builtin.file
        path: /usr/share/nginx/html
        state: absent
@@ -23,8 +23,8 @@
         src: https://expense-artifacts.s3.amazonaws.com/frontend.zip
         dest: /usr/share/nginx/html
         remote_src: yes
-    - name: Start nginx Service
+    - name: Start Nginx Service
       ansible.builtin.systemd:
-        name: nginx
+        name: Nginx
         state: restarted
         enabled: yes
