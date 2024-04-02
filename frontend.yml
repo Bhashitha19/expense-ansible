@@ -16,7 +16,7 @@
         state: absent
     - name: Create Nginx Dir
       ansible.builtin.file:
-        path: /user/share/nginx/html
+        path: /usr/share/nginx/html
         state: directory
     - name: Download and Extract Frontend Content
       ansible.builtin.unarchive:
