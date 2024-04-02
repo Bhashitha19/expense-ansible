@@ -9,9 +9,9 @@
     - name: Copy Expense Config file
       ansible.builtin.copy:
         src: expense.conf
-        destination: /etc/nginx/default.d/expense.conf
+        dest: /etc/nginx/default.d/expense.conf
     - name: Clean Old Nginx Dir
-      ansible.builtin.file
+      ansible.builtin.file:
         path: /usr/share/nginx/html
         state: absent
     - name: Create Nginx Dir
@@ -19,9 +19,9 @@
         path: /user/share/nginx/html
         state: directory
     - name: Download and Extract Frontend Content
-      ansible.builtin.un archive:
+      ansible.builtin.unarchive:
         src: https://expense-artifacts.s3.amazonaws.com/frontend.zip
-        destination: /usr/share/nginx/html
+        dest: /usr/share/nginx/html
         remote_src: yes
     - name: Start nginx Service
       ansible.builtin.systemd:
