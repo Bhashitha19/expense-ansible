@@ -5,11 +5,11 @@
 
 - name: Create App Directory
   ansible.builtin.file:
-    path: " {{ app_dir }}"
+    path: "{{ app_dir }}"
     state: directory
 
 - name: Download And Extract App Content
   ansible.builtin.unarchive:
-    src: https://expense-artifacts.s3.amazonaws.com/{{component}}.zip
+    src: https://expense-artifacts.s3.amazonaws.com/ {{component}}.zip
     dest: "{{ app_dir }}"
     remote_src: yes
