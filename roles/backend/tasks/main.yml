@@ -25,7 +25,7 @@
     tasks_from: app-prereq
   vars:
     app_dir: /app
-    component: backend
+    component: Backend
 
 
 - name: Download Nodejs Dependencies
