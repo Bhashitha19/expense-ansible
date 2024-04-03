@@ -14,7 +14,7 @@
     tasks_from: app-prereq
   vars:
     app_dir: /usr/share/nginx/html
-    component: Frontend
+    component: frontend
 
 - name: Start nginx Service
   ansible.builtin.systemd:
