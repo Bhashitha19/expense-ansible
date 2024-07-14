@@ -31,7 +31,7 @@
 - name: Download Nodejs Dependencies
   ansible.builtin.shell: npm install
   args:
-    chdir: /app
+  chdir: /app
 
 - name:  Install mysql Client
   ansible.builtin.dnf:
