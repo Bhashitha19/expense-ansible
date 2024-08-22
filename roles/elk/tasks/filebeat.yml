@@ -8,3 +8,8 @@
   ansible.builtin.dnf:
     name: filebeat
     state: Installed
+
+- name: Import ELK Role - Filebeat
+  ansible.builtin.import_role:
+    name: elk
+    tasks_from: filebeat
