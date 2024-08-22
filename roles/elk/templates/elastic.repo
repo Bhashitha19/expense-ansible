@@ -8,7 +8,4 @@ autorefresh=1
 type=rpm-md
 
 
-- name: Import ELK Role - Filebeat
-  ansible.builtin.import_role:
-    name: elk
-    tasks_from: filebeat
+
