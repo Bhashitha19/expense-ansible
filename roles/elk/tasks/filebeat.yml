@@ -3,7 +3,7 @@
     src: elastic.repo
     dest: /etc/yum.repos.d/elastic.repo
 
-- name: Import ELK Role - Filebeat
+- name: Import eLK Role - Filebeat
   ansible.builtin.import_role:
     name: elk
     tasks_from: filebeat
