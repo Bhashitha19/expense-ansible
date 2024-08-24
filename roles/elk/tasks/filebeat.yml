@@ -6,7 +6,7 @@
 
 - name: Restart rsyslog service
   ansible.biltin.systemd:
-      name: rsyslog
+    - name: rsyslog
       state: restarted
   when: is_rsyslog_needed
 
